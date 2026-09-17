@@ -158,34 +158,29 @@
 
 
 
-    <script>
+<script>
 const URL_RESENAS = "https://script.google.com/macros/s/AKfycbzkEweZ_mkHsy89BVNah4fKHwLRJyGutQEc7Oh2zSZrY8Y7-0wABENkNsXbYH3-mKIqyA/exec";
 
-fetch(URL_RESENAS)
-    .then(response => response.json())
-    .then(resenas => {
-        const container = document.getElementById("reviews-container");
+function cargarResenas(resenas) {
+    const container = document.getElementById("reviews-container");
 
-        resenas.forEach(resena => {
-            const card = document.createElement("div");
-            card.className = "review-card";
+    resenas.forEach(resena => {
+        const card = document.createElement("div");
+        card.className = "review-card";
 
-            card.innerHTML = `
-                <div class="stars">${resena.estrellas}</div>
+        card.innerHTML = `
+            <div class="stars">${resena.estrellas}</div>
+            <p>“${resena.comentario}”</p>
+            <span>@${resena.instagram.replace("@", "")}</span>
+        `;
 
-                <p>
-                    “${resena.comentario}”
-                </p>
-
-                <span>@${resena.instagram.replace("@", "")}</span>
-            `;
-
-            container.appendChild(card);
-        });
-    })
-    .catch(error => {
-        console.error("Error al cargar las reseñas:", error);
+        container.appendChild(card);
     });
+}
+
+const script = document.createElement("script");
+script.src = URL_RESENAS + "?callback=cargarResenas";
+document.body.appendChild(script);
 </script>
 
 </body>
