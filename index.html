@@ -159,6 +159,10 @@
 
 
 <script>
+console.log("PRUEBA: EL JAVASCRIPT FUNCIONA");
+</script>
+
+<script>
 const URL_RESENAS = "https://script.google.com/macros/s/AKfycbwOb7lQSb_TjkAS-N82oMP7CyCgiiQ-F98mixc7aqyyxeYe7PUQoSh2EKvLscDUOvA/exec";
 
 function cargarResenas(resenas) {
@@ -190,10 +194,8 @@ function cargarResenas(resenas) {
 
 const script = document.createElement("script");
 script.src = URL_RESENAS + "?callback=cargarResenas";
-
 document.body.appendChild(script);
 </script>
-
 </body>
 </html>
 </html>
