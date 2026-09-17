@@ -162,19 +162,27 @@
 const URL_RESENAS = "https://script.google.com/macros/s/AKfycbwOb7lQSb_TjkAS-N82oMP7CyCgiiQ-F98mixc7aqyyxeYe7PUQoSh2EKvLscDUOvA/exec";
 
 function cargarResenas(resenas) {
+
+    console.log("RESEÑAS RECIBIDAS:", resenas);
+
     const container = document.getElementById("reviews-container");
+
+    if (!container) {
+        console.error("NO SE ENCUENTRA reviews-container");
+        return;
+    }
 
     container.innerHTML = "";
 
-    resenas.forEach(resena => {
+    resenas.forEach(function(resena) {
+
         const card = document.createElement("div");
         card.className = "review-card";
 
-        card.innerHTML = `
-            <div class="stars">${resena.estrellas}</div>
-            <p>“${resena.comentario}”</p>
-            <span>${resena.instagram}</span>
-        `;
+        card.innerHTML =
+            '<div class="stars">' + resena.estrellas + '</div>' +
+            '<p>“' + resena.comentario + '”</p>' +
+            '<span>' + resena.instagram + '</span>';
 
         container.appendChild(card);
     });
@@ -182,9 +190,10 @@ function cargarResenas(resenas) {
 
 const script = document.createElement("script");
 script.src = URL_RESENAS + "?callback=cargarResenas";
+
 document.body.appendChild(script);
 </script>
 
 </body>
-</body>
+</html>
 </html>
