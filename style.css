@@ -350,4 +350,132 @@ footer p:last-child {
 }
 
 
-/* == ======================= MÓVIL — CARRUSEL ========================= */ @media (max-width: 700px) { header { flex-direction: column; gap: 15px; padding: 18px 15px; } nav { gap: 15px; flex-wrap: wrap; justify-content: center; } nav a { font-size: 12px; } /* HERO */ .hero { min-height: 75vh; padding: 60px 20px; } .hero h1 { font-size: 58px; } .hero p { font-size: 14px; } /* CARRUSEL HORIZONTAL */ main { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; gap: 18px; padding: 25px 0 50px; /* Ocultar scrollbar */ scrollbar-width: none; } main::-webkit-scrollbar { display: none; } /* El hero sigue ocupando toda la pantalla */ .hero { flex: 0 0 100vw; scroll-snap-align: start; margin: 0; } /* Las tarjetas ocupan casi toda la pantalla dejando ver un poco de la siguiente */ #pedir, #presupuesto, #resenas { flex: 0 0 85vw; width: 85vw; min-height: 430px; scroll-snap-align: center; margin: 0; padding: 60px 25px; border-radius: 25px; } .section h2 { font-size: 40px; } .section > p { font-size: 14px; } .button { width: 100%; max-width: 300px; } footer { flex: 0 0 100vw; } }
+/* ==
+=======================
+   MÓVIL — CARRUSEL
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 18px 15px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 75vh;
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+
+    /*
+       CARRUSEL HORIZONTAL
+    */
+
+    main {
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        scroll-snap-type: x mandatory;
+
+        gap: 18px;
+
+        padding: 25px 0 50px;
+
+        /* Ocultar scrollbar */
+        scrollbar-width: none;
+    }
+
+    main::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* El hero sigue ocupando toda la pantalla */
+
+    .hero {
+        flex: 0 0 100vw;
+
+        scroll-snap-align: start;
+
+        margin: 0;
+    }
+
+
+    /*
+       Las tarjetas ocupan casi toda
+       la pantalla dejando ver un poco
+       de la siguiente
+    */
+
+    #pedir,
+    #presupuesto,
+    #resenas {
+
+        flex: 0 0 85vw;
+
+        width: 85vw;
+
+        min-height: 430px;
+
+        scroll-snap-align: center;
+
+        margin: 0;
+
+        padding: 60px 25px;
+
+        border-radius: 25px;
+    }
+
+
+    .section h2 {
+        font-size: 40px;
+    }
+
+
+    .section > p {
+        font-size: 14px;
+    }
+
+
+    .button {
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+
+    footer {
+        flex: 0 0 100vw;
+    }
+}
