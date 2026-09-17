@@ -1,8 +1,9 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap');
 
 
 /* =========================
-   PATTY NAIL SETS
+   GENERAL
    ========================= */
 
 * {
@@ -29,12 +30,14 @@ body {
 
 header {
     width: 100%;
-    padding: 22px 7%;
+    padding: 20px 7%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background: #fffaf8;
+
     border-bottom: 1px solid #eadeda;
 
     position: sticky;
@@ -42,12 +45,24 @@ header {
     z-index: 100;
 }
 
+
+/* SOLO EL CORAZÓN */
+
 .logo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 27px;
-    letter-spacing: 0.5px;
-    color: #493632;
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+    line-height: 1;
+
+    color: #cf547b;
+
+    transition: 0.3s;
 }
+
+.logo:hover {
+    transform: scale(1.15) rotate(-5deg);
+}
+
 
 nav {
     display: flex;
@@ -56,9 +71,12 @@ nav {
 
 nav a {
     text-decoration: none;
+
     color: #493632;
+
     font-size: 14px;
     font-weight: 500;
+
     transition: 0.3s;
 }
 
@@ -89,16 +107,6 @@ nav a:hover {
     max-width: 750px;
 }
 
-.small-title {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 3px;
-
-    color: #cf547b;
-
-    margin-bottom: 18px;
-}
-
 .hero h1 {
     font-family: 'Oswald', sans-serif;
 
@@ -112,7 +120,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-.hero p:not(.small-title) {
+.hero p {
     max-width: 600px;
 
     margin: 0 auto 35px;
@@ -125,13 +133,16 @@ nav a:hover {
 
 
 /* =========================
-   BUTTONS
+   BOTONES
    ========================= */
 
 .buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
@@ -148,61 +159,102 @@ nav a:hover {
     border-radius: 30px;
 
     font-family: 'Montserrat', sans-serif;
+
     font-size: 13px;
     font-weight: 600;
 
     border: 1px solid #cf547b;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .button:hover {
     background: #493632;
+
     border-color: #493632;
 
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(73, 54, 50, 0.15);
 }
 
 .button.secondary {
     background: transparent;
+
     color: #493632;
+
     border-color: #493632;
 }
 
 .button.secondary:hover {
     background: #493632;
+
     color: white;
 }
 
 
 /* =========================
-   SECTIONS
+   SECCIONES
    ========================= */
 
 .section {
     min-height: 55vh;
 
-    padding: 100px 20px;
+    margin: 35px 7%;
+
+    padding: 90px 30px;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
+
     align-items: center;
 
     text-align: center;
 
-    background: #fffaf8;
+    border-radius: 28px;
+
+    transition: 0.35s ease;
 }
 
-.section:nth-child(even) {
-    background: #ffffff;
+
+/* PEDIR */
+
+.section-pedir {
+    background: #f8e4e5;
 }
+
+
+/* PRESUPUESTO */
+
+.section-presupuesto {
+    background: #f3e8df;
+}
+
+
+/* RESEÑAS */
+
+.section-resenas {
+    background: #f9eef0;
+}
+
+
+/* EFECTO AL PASAR EL RATÓN */
+
+.section:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(73, 54, 50, 0.08);
+}
+
 
 .section h2 {
     font-family: 'Oswald', sans-serif;
 
     font-size: 48px;
+
     font-weight: 500;
 
     color: #493632;
@@ -210,7 +262,8 @@ nav a:hover {
     margin-bottom: 18px;
 }
 
-.section > p:not(.small-title) {
+
+.section > p {
     max-width: 600px;
 
     color: #695754;
@@ -231,13 +284,16 @@ footer {
     padding: 50px 20px;
 
     background: #493632;
+
     color: #fffaf8;
 }
 
 footer p:first-child {
-    font-family: 'Oswald', sans-serif;
+    font-family: Georgia, serif;
 
-    font-size: 25px;
+    font-size: 32px;
+
+    color: #cf547b;
 
     margin-bottom: 5px;
 }
@@ -259,6 +315,7 @@ footer p:last-child {
 
     header {
         flex-direction: column;
+
         gap: 15px;
 
         padding: 18px 15px;
@@ -268,6 +325,7 @@ footer p:last-child {
         gap: 15px;
 
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -285,14 +343,18 @@ footer p:last-child {
         font-size: 58px;
     }
 
-    .hero p:not(.small-title) {
+    .hero p {
         font-size: 14px;
     }
 
     .section {
         min-height: 50vh;
 
+        margin: 20px 15px;
+
         padding: 75px 20px;
+
+        border-radius: 22px;
     }
 
     .section h2 {
@@ -301,6 +363,8 @@ footer p:last-child {
 
     .button {
         width: 100%;
+
         max-width: 300px;
     }
 }
+```
