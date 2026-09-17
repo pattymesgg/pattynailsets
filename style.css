@@ -105,11 +105,29 @@ main {
 
     padding: 80px 20px;
 
-    background: #fdf1f0;
+    background-image: url("IMG_8863 (1).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
 }
 
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(253, 241, 240, 0.55);
+}
 .hero-text {
     max-width: 750px;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 .hero h1 {
