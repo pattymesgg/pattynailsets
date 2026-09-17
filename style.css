@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap');
+
+
 /* =========================
    PATTY NAIL SETS
    ========================= */
@@ -13,9 +16,9 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: 'Montserrat', sans-serif;
     background: #fffaf8;
-    color: #4d403d;
+    color: #493632;
     line-height: 1.6;
 }
 
@@ -30,17 +33,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     background: #fffaf8;
     border-bottom: 1px solid #eadeda;
+
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #594b47;
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    letter-spacing: 0.5px;
+    color: #493632;
 }
 
 nav {
@@ -50,13 +56,14 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #594b47;
-    font-size: 15px;
+    color: #493632;
+    font-size: 14px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #c9979b;
+    color: #cf547b;
 }
 
 
@@ -66,38 +73,54 @@ nav a:hover {
 
 .hero {
     min-height: 80vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
     padding: 80px 20px;
+
     background: #fdf1f0;
 }
 
 .hero-text {
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .small-title {
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 3px;
-    color: #b47f84;
+
+    color: #cf547b;
+
     margin-bottom: 18px;
 }
 
 .hero h1 {
-    font-size: clamp(48px, 7vw, 82px);
-    line-height: 1.05;
-    font-weight: normal;
-    color: #4b3c39;
-    margin-bottom: 25px;
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(55px, 8vw, 95px);
+
+    line-height: 0.95;
+    font-weight: 500;
+
+    color: #493632;
+
+    margin-bottom: 30px;
 }
 
 .hero p:not(.small-title) {
-    max-width: 570px;
+    max-width: 600px;
+
     margin: 0 auto 35px;
-    font-size: 17px;
-    color: #756663;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #695754;
 }
 
 
@@ -114,28 +137,41 @@ nav a:hover {
 
 .button {
     display: inline-block;
-    padding: 14px 27px;
-    background: #b9878c;
+
+    padding: 15px 30px;
+
+    background: #cf547b;
     color: white;
+
     text-decoration: none;
+
     border-radius: 30px;
-    font-size: 14px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    border: 1px solid #cf547b;
+
     transition: 0.3s;
-    border: 1px solid #b9878c;
 }
 
 .button:hover {
-    background: #a97177;
+    background: #493632;
+    border-color: #493632;
+
     transform: translateY(-2px);
 }
 
 .button.secondary {
     background: transparent;
-    color: #9b696e;
+    color: #493632;
+    border-color: #493632;
 }
 
 .button.secondary:hover {
-    background: #f8e2e2;
+    background: #493632;
+    color: white;
 }
 
 
@@ -145,12 +181,18 @@ nav a:hover {
 
 .section {
     min-height: 55vh;
+
     padding: 100px 20px;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
+    background: #fffaf8;
 }
 
 .section:nth-child(even) {
@@ -158,15 +200,23 @@ nav a:hover {
 }
 
 .section h2 {
-    font-size: 42px;
-    font-weight: normal;
-    color: #4b3c39;
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 48px;
+    font-weight: 500;
+
+    color: #493632;
+
     margin-bottom: 18px;
 }
 
 .section > p:not(.small-title) {
-    max-width: 580px;
-    color: #756663;
+    max-width: 600px;
+
+    color: #695754;
+
+    font-size: 15px;
+
     margin-bottom: 30px;
 }
 
@@ -177,19 +227,27 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 45px 20px;
-    background: #f6e8e6;
-    color: #695957;
+
+    padding: 50px 20px;
+
+    background: #493632;
+    color: #fffaf8;
 }
 
 footer p:first-child {
-    font-size: 20px;
-    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 25px;
+
     margin-bottom: 5px;
 }
 
 footer p:last-child {
-    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 12px;
+
+    opacity: 0.8;
 }
 
 
@@ -202,39 +260,43 @@ footer p:last-child {
     header {
         flex-direction: column;
         gap: 15px;
+
         padding: 18px 15px;
     }
 
     nav {
-        gap: 14px;
+        gap: 15px;
+
         flex-wrap: wrap;
         justify-content: center;
     }
 
     nav a {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .hero {
         min-height: 75vh;
+
         padding: 60px 20px;
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: 58px;
     }
 
     .hero p:not(.small-title) {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .section {
         min-height: 50vh;
+
         padding: 75px 20px;
     }
 
     .section h2 {
-        font-size: 34px;
+        font-size: 40px;
     }
 
     .button {
