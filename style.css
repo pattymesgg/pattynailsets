@@ -419,7 +419,14 @@ footer p {
 
     opacity: 0.8;
 }
+.socials a {
+    color: #fffaf8;
+    text-decoration: none;
+}
 
+.socials a:hover {
+    color: #cf547b;
+}
 
 /* =========================
    MÓVIL
