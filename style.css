@@ -120,7 +120,9 @@ main {
 
     inset: 0;
 
-    background: rgba(253, 241, 240, 0.55);
+    background: rgba(255, 250, 248, 0.72);
+       z-index: 0;
+
 }
 .hero-text {
     max-width: 750px;
@@ -129,7 +131,6 @@ main {
 
     z-index: 1;
 }
-
 .hero h1 {
     font-family: 'Oswald', sans-serif;
 
@@ -202,7 +203,7 @@ main {
 }
 
 .button.secondary {
-    background: transparent;
+    background: #fffaf8;
 
     color: #493632;
 
@@ -213,6 +214,8 @@ main {
     background: #493632;
 
     color: white;
+
+    border-color: #493632;
 }
 
 
