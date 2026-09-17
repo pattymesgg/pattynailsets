@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap');
 
 
@@ -36,7 +37,6 @@ header {
     align-items: center;
 
     background: #fffaf8;
-
     border-bottom: 1px solid #eadeda;
 
     position: sticky;
@@ -44,24 +44,17 @@ header {
     z-index: 100;
 }
 
-
-/* SOLO EL CORAZÓN */
-
 .logo {
     font-family: Georgia, serif;
-
     font-size: 38px;
     line-height: 1;
-
     color: #cf547b;
-
     transition: 0.3s;
 }
 
 .logo:hover {
     transform: scale(1.15) rotate(-5deg);
 }
-
 
 nav {
     display: flex;
@@ -70,12 +63,9 @@ nav {
 
 nav a {
     text-decoration: none;
-
     color: #493632;
-
     font-size: 14px;
     font-weight: 500;
-
     transition: 0.3s;
 }
 
@@ -137,11 +127,8 @@ nav a:hover {
 
 .buttons {
     display: flex;
-
     justify-content: center;
-
     gap: 15px;
-
     flex-wrap: wrap;
 }
 
@@ -169,7 +156,6 @@ nav a:hover {
 
 .button:hover {
     background: #493632;
-
     border-color: #493632;
 
     transform: translateY(-3px);
@@ -179,29 +165,35 @@ nav a:hover {
 
 .button.secondary {
     background: transparent;
-
     color: #493632;
-
     border-color: #493632;
 }
 
 .button.secondary:hover {
     background: #493632;
-
     color: white;
 }
 
 
 /* =========================
-   SECCIONES
+   CONTENEDOR DE TARJETAS
+   ========================= */
+
+main {
+    padding-bottom: 40px;
+}
+
+
+/* =========================
+   TARJETAS
    ========================= */
 
 .section {
-    min-height: 55vh;
+    min-height: 360px;
 
-    margin: 35px 7%;
+    margin: 35px 0 0;
 
-    padding: 90px 30px;
+    padding: 60px 35px;
 
     display: flex;
 
@@ -216,43 +208,94 @@ nav a:hover {
     border-radius: 28px;
 
     transition: 0.35s ease;
+
+    /* Cada tarjeta ocupa un tercio */
+    flex: 1;
 }
 
 
-/* PEDIR */
+/*
+   Convertimos las tres secciones
+   en una fila horizontal
+*/
+
+#pedir,
+#presupuesto,
+#resenas {
+    width: calc(33.333% - 24px);
+}
+
+
+/* =========================
+   AGRUPAR LAS TARJETAS
+   ========================= */
+
+/*
+   El HTML actual tiene las secciones
+   directamente dentro de <main>.
+   Hacemos que main las coloque
+   horizontalmente.
+*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    padding: 35px 7% 70px;
+}
+
+
+/* El hero ocupa toda la fila */
+
+.hero {
+    width: 100%;
+    margin: 0;
+    flex: 0 0 100%;
+}
+
+
+/* Las tarjetas */
+
+.section {
+    margin: 0;
+}
+
+
+/* =========================
+   COLORES
+   ========================= */
 
 .section-pedir {
     background: #f8e4e5;
 }
 
-
-/* PRESUPUESTO */
-
 .section-presupuesto {
     background: #f3e8df;
 }
-
-
-/* RESEÑAS */
 
 .section-resenas {
     background: #f9eef0;
 }
 
 
-/* EFECTO AL PASAR EL RATÓN */
+/* =========================
+   EFECTO HOVER
+   ========================= */
 
 .section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
 
-    box-shadow: 0 15px 35px rgba(73, 54, 50, 0.08);
+    box-shadow:
+        0 18px 40px rgba(73, 54, 50, 0.10);
 }
-
 
 .section h2 {
     font-family: 'Oswald', sans-serif;
 
-    font-size: 48px;
+    font-size: 42px;
+
+    line-height: 1.05;
 
     font-weight: 500;
 
@@ -261,13 +304,12 @@ nav a:hover {
     margin-bottom: 18px;
 }
 
-
 .section > p {
-    max-width: 600px;
+    max-width: 390px;
 
     color: #695754;
 
-    font-size: 15px;
+    font-size: 14px;
 
     margin-bottom: 30px;
 }
@@ -278,6 +320,8 @@ nav a:hover {
    ========================= */
 
 footer {
+    width: 100%;
+
     text-align: center;
 
     padding: 50px 20px;
@@ -307,7 +351,7 @@ footer p:last-child {
 
 
 /* =========================
-   MÓVIL
+   MÓVIL — CARRUSEL
    ========================= */
 
 @media (max-width: 700px) {
@@ -322,48 +366,4 @@ footer p:last-child {
 
     nav {
         gap: 15px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    .hero {
-        min-height: 75vh;
-
-        padding: 60px 20px;
-    }
-
-    .hero h1 {
-        font-size: 58px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    .section {
-        min-height: 50vh;
-
-        margin: 20px 15px;
-
-        padding: 75px 20px;
-
-        border-radius: 22px;
-    }
-
-    .section h2 {
-        font-size: 40px;
-    }
-
-    .button {
-        width: 100%;
-
-        max-width: 300px;
-    }
-}
 ```
