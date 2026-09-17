@@ -48,13 +48,16 @@ header {
     font-family: Georgia, serif;
     font-size: 38px;
     line-height: 1;
+
     color: #cf547b;
+
     transition: 0.3s;
 }
 
 .logo:hover {
     transform: scale(1.15) rotate(-5deg);
 }
+
 
 nav {
     display: flex;
@@ -63,9 +66,12 @@ nav {
 
 nav a {
     text-decoration: none;
+
     color: #493632;
+
     font-size: 14px;
     font-weight: 500;
+
     transition: 0.3s;
 }
 
@@ -75,10 +81,20 @@ nav a:hover {
 
 
 /* =========================
+   MAIN
+   ========================= */
+
+main {
+    padding-bottom: 40px;
+}
+
+
+/* =========================
    HERO
    ========================= */
 
 .hero {
+    width: 100%;
     min-height: 80vh;
 
     display: flex;
@@ -127,8 +143,11 @@ nav a:hover {
 
 .buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
@@ -156,6 +175,7 @@ nav a:hover {
 
 .button:hover {
     background: #493632;
+
     border-color: #493632;
 
     transform: translateY(-3px);
@@ -165,12 +185,15 @@ nav a:hover {
 
 .button.secondary {
     background: transparent;
+
     color: #493632;
+
     border-color: #493632;
 }
 
 .button.secondary:hover {
     background: #493632;
+
     color: white;
 }
 
@@ -179,8 +202,16 @@ nav a:hover {
    CONTENEDOR DE TARJETAS
    ========================= */
 
-main {
-    padding-bottom: 40px;
+.cards-container {
+    width: 86%;
+
+    margin: 35px auto 0;
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: stretch;
 }
 
 
@@ -189,9 +220,9 @@ main {
    ========================= */
 
 .section {
-    min-height: 360px;
+    flex: 1;
 
-    margin: 35px 0 0;
+    min-height: 420px;
 
     padding: 60px 35px;
 
@@ -208,57 +239,6 @@ main {
     border-radius: 28px;
 
     transition: 0.35s ease;
-
-    /* Cada tarjeta ocupa un tercio */
-    flex: 1;
-}
-
-
-/*
-   Convertimos las tres secciones
-   en una fila horizontal
-*/
-
-#pedir,
-#presupuesto,
-#resenas {
-    width: calc(33.333% - 24px);
-}
-
-
-/* =========================
-   AGRUPAR LAS TARJETAS
-   ========================= */
-
-/*
-   El HTML actual tiene las secciones
-   directamente dentro de <main>.
-   Hacemos que main las coloque
-   horizontalmente.
-*/
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-
-    padding: 35px 7% 70px;
-}
-
-
-/* El hero ocupa toda la fila */
-
-.hero {
-    width: 100%;
-    margin: 0;
-    flex: 0 0 100%;
-}
-
-
-/* Las tarjetas */
-
-.section {
-    margin: 0;
 }
 
 
@@ -280,7 +260,7 @@ main {
 
 
 /* =========================
-   EFECTO HOVER
+   HOVER
    ========================= */
 
 .section:hover {
@@ -289,6 +269,11 @@ main {
     box-shadow:
         0 18px 40px rgba(73, 54, 50, 0.10);
 }
+
+
+/* =========================
+   TÍTULOS TARJETAS
+   ========================= */
 
 .section h2 {
     font-family: 'Oswald', sans-serif;
@@ -331,28 +316,15 @@ footer {
     color: #fffaf8;
 }
 
-footer p:first-child {
-    font-family: Georgia, serif;
-
-    font-size: 32px;
-
-    color: #cf547b;
-
-    margin-bottom: 5px;
-}
-
-footer p:last-child {
-    font-family: 'Montserrat', sans-serif;
-
+footer p {
     font-size: 12px;
 
     opacity: 0.8;
 }
 
 
-/* ==
-=======================
-   MÓVIL — CARRUSEL
+/* =========================
+   MÓVIL
    ========================= */
 
 @media (max-width: 700px) {
@@ -378,7 +350,9 @@ footer p:last-child {
     }
 
 
-    /* HERO */
+    /* =====================
+       HERO
+       ===================== */
 
     .hero {
         min-height: 75vh;
@@ -395,73 +369,41 @@ footer p:last-child {
     }
 
 
-    /*
-       CARRUSEL HORIZONTAL
-    */
+    /* =====================
+       TARJETAS EN MÓVIL
+       ===================== */
 
-    main {
+    .cards-container {
+
+        width: 90%;
+
+        margin: 25px auto 0;
+
         display: flex;
 
-        flex-wrap: nowrap;
+        flex-direction: column;
 
-        overflow-x: auto;
-
-        scroll-snap-type: x mandatory;
-
-        gap: 18px;
-
-        padding: 25px 0 50px;
-
-        /* Ocultar scrollbar */
-        scrollbar-width: none;
-    }
-
-    main::-webkit-scrollbar {
-        display: none;
+        gap: 20px;
     }
 
 
-    /* El hero sigue ocupando toda la pantalla */
+    .section {
 
-    .hero {
-        flex: 0 0 100vw;
-
-        scroll-snap-align: start;
-
-        margin: 0;
-    }
-
-
-    /*
-       Las tarjetas ocupan casi toda
-       la pantalla dejando ver un poco
-       de la siguiente
-    */
-
-    #pedir,
-    #presupuesto,
-    #resenas {
-
-        flex: 0 0 85vw;
-
-        width: 85vw;
+        width: 100%;
 
         min-height: 430px;
-
-        scroll-snap-align: center;
-
-        margin: 0;
 
         padding: 60px 25px;
 
         border-radius: 25px;
+
+        flex: none;
     }
 
 
     .section h2 {
         font-size: 40px;
     }
-
 
     .section > p {
         font-size: 14px;
@@ -474,8 +416,4 @@ footer p:last-child {
         max-width: 300px;
     }
 
-
-    footer {
-        flex: 0 0 100vw;
-    }
 }
