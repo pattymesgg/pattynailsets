@@ -160,13 +160,12 @@
 
 <script>
 console.log("PRUEBA: EL JAVASCRIPT FUNCIONA");
-</script>
 
-<script>
 const URL_RESENAS = "https://script.google.com/macros/s/AKfycbwOb7lQSb_TjkAS-N82oMP7CyCgiiQ-F98mixc7aqyyxeYe7PUQoSh2EKvLscDUOvA/exec";
 
-function cargarResenas(resenas) {
+console.log("URL DE RESEÑAS:", URL_RESENAS);
 
+function cargarResenas(resenas) {
     console.log("RESEÑAS RECIBIDAS:", resenas);
 
     const container = document.getElementById("reviews-container");
@@ -179,7 +178,6 @@ function cargarResenas(resenas) {
     container.innerHTML = "";
 
     resenas.forEach(function(resena) {
-
         const card = document.createElement("div");
         card.className = "review-card";
 
@@ -194,8 +192,11 @@ function cargarResenas(resenas) {
 
 const script = document.createElement("script");
 script.src = URL_RESENAS + "?callback=cargarResenas";
+
 document.body.appendChild(script);
+
+console.log("SCRIPT DE RESEÑAS AÑADIDO:", script.src);
 </script>
 </body>
-</html>
+
 </html>
