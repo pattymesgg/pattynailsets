@@ -120,7 +120,7 @@ main {
 
     inset: 0;
 
-   background: rgba(121, 121, 121, 0.35)
+   background: rgba(121, 121, 121, 0.35);
        z-index: 0;
 
 }
